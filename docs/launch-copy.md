@@ -83,7 +83,7 @@ particularly on the format faithfulness and the print layout — I
 designed the print output around bringing entries into therapy
 sessions. Also open to being told the pricing is wrong.
 
-Source: https://github.com/acilox/ledger (MIT, PWA is fully
+Source: https://github.com/Deewakarmishra/ledger (MIT, PWA is fully
 functional in free tier — Pro is unlocked by a license key from
 Polar).
 ```
@@ -186,7 +186,7 @@ and the print layout, which I designed around bringing entries
 into sessions.
 
 → ledger.acilox.com
-→ Source: github.com/acilox/ledger
+→ Source: github.com/Deewakarmishra/ledger
 ```
 
 ---
@@ -308,7 +308,7 @@ Free tier is fully functional (last 30 entries). Happy to give any
 practicing clinician a free Pro license — DM me.
 
 Source is public on GitHub if you want to audit the encryption /
-data handling: github.com/acilox/ledger
+data handling: github.com/Deewakarmishra/ledger
 ```
 
 ---
@@ -341,7 +341,7 @@ the technical audience:
   gracefully degrades to cached state if the network is offline
 - Installable via the standard PWA prompt. Add-to-Home-Screen
   works on iOS 17+ and Android Chrome
-- MIT source: github.com/acilox/ledger
+- MIT source: github.com/Deewakarmishra/ledger
 
 The product itself is a CBT thought record (mental health self-
 help), one-time $79 for Pro, but posting here for the PWA nerds.
@@ -408,7 +408,7 @@ Ledger — week 1:
 
 What week 2 looks like: [one concrete next thing]
 
-github.com/acilox/ledger
+github.com/Deewakarmishra/ledger
 ```
 
 ---
@@ -490,7 +490,7 @@ data stays on the client's device.
 I didn't. Ledger uses the browser's WebCrypto API — PBKDF2 and
 AES-GCM primitives that ship in every modern browser and are the
 same ones your bank uses. The code that calls them is 40 lines and
-public on GitHub (github.com/acilox/ledger). No custom crypto.
+public on GitHub (github.com/Deewakarmishra/ledger). No custom crypto.
 ```
 
 **"Can I self-host?"**

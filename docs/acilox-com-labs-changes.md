@@ -79,11 +79,11 @@ existing `.product-card` styles already cover everything.
         Try Ledger
       </a>
       <span class="dot">·</span>
-      <a href="https://github.com/acilox/ledger">
+      <a href="https://github.com/Deewakarmishra/ledger">
         Source (commercial license)
       </a>
       <span class="dot">·</span>
-      <a href="https://github.com/acilox/ledger/blob/main/README.md">
+      <a href="https://github.com/Deewakarmishra/ledger/blob/main/README.md">
         Docs
       </a>
     </div>
@@ -102,7 +102,7 @@ existing `.product-card` styles already cover everything.
 |---|---|---|
 | `<LEDGER_PRODUCT_ID>` | Polar dashboard → Products → "Ledger Pro – Lifetime" → Public link | After the Ledger Polar product is created |
 | `https://ledger.acilox.com` | Subdomain set up to serve the static build from `labs/ledger/build/` (Cloudflare Pages or equivalent) | Before this card goes live |
-| `https://github.com/acilox/ledger` Marketplace URL | First public push gives you the canonical URL | After v0.1.0 tag is pushed |
+| `https://github.com/Deewakarmishra/ledger` Marketplace URL | First public push gives you the canonical URL | After v0.1.0 tag is pushed |
 
 ## Optional small CSS addition
 
