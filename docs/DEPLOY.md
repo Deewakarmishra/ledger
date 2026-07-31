@@ -133,7 +133,7 @@ downstream stage assumes green here.
    repo already has them.
 6. Click **Create repository**.
 7. On the empty-repo page, note the HTTPS URL:
-   `https://github.com/acilox/ledger.git`.
+   `https://github.com/Deewakarmishra/ledger.git`.
 
 **Push the local code:**
 
@@ -149,7 +149,7 @@ git commit -m "v0.1.0 initial release"
 # Replace <PAT> with your Personal Access Token; the shell history
 # capture setting on your mac is off, but for extra safety, prefix
 # the command with a leading space to skip it entirely.
- git remote add origin https://<PAT>@github.com/acilox/ledger.git
+ git remote add origin https://<PAT>@github.com/Deewakarmishra/ledger.git
  git branch -M main
  git push -u origin main
 
@@ -158,7 +158,7 @@ git commit -m "v0.1.0 initial release"
  git push origin v0.1.0
 
 # Immediately scrub the PAT from the remote URL.
- git remote set-url origin https://github.com/acilox/ledger.git
+ git remote set-url origin https://github.com/Deewakarmishra/ledger.git
 ```
 
 **Verify on GitHub:**

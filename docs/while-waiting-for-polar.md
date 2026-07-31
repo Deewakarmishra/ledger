@@ -6,7 +6,7 @@ of everything that CAN progress in parallel, in priority order.
 
 **Where we are (2026-07-01):**
 - v0.1.0 code shipped, tests green, tagged, pushed to
-  https://github.com/acilox/ledger.
+  https://github.com/Deewakarmishra/ledger.
 - Polar not started → Stages 4, 6 blocked.
 - Cloudflare not configured → Stages 3, 5 blocked (but you control the
   pace here — do it whenever).
