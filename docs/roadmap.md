@@ -12,11 +12,11 @@ Launch blockers for v0.1.0 → see [v0.1.0-launch-checklist.md](v0.1.0-launch-ch
 Small, non-invasive improvements motivated by the first cohort of real
 users. Ship as patch releases with no schema change.
 
-- **OG image at 1200×630 for `ledger.acilox.com`.** The favicon SVG
+- **OG image at 1200×630 for `ledger.deewakarmishra.github.io`.** The favicon SVG
   already carries the mark. Render it centered on `#0f172a` with the
   wordmark "Ledger · a calm CBT thought record" below. Wire into
   `<meta property="og:image">` in `src/app.html`.
-- **Landing page copy on `ledger.acilox.com`.** Right now the deploy
+- **Landing page copy on `ledger.deewakarmishra.github.io`.** Right now the deploy
   is the app itself with the welcome flow as the "landing." A dedicated
   marketing route (`/about` or a static index that redirects to the
   app after 2 seconds) would help referral traffic that isn't already

@@ -21,7 +21,7 @@ import {
   type ValidateResponse,
 } from './license-state';
 
-const DEFAULT_SERVER = 'https://acilox-license-worker.acilox.workers.dev';
+const DEFAULT_SERVER = 'https://license-worker.deewakar.workers.dev';
 const LS_STATE_KEY = 'ledger.license.state.v1';
 const LS_MACHINE_KEY = 'ledger.machine.id.v1';
 const LS_SERVER_KEY = 'ledger.license.server.v1';

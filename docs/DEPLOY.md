@@ -9,8 +9,8 @@ if any account (Polar, Cloudflare) still needs verification.
 **Companion docs:**
 - [AGENTS.md](AGENTS.md) — architecture + code map, for context.
 - [roadmap.md](roadmap.md) — what comes after v0.1.0.
-- [acilox-com-labs-changes.md](acilox-com-labs-changes.md) — the
-  exact block to paste on `acilox.com/labs` in Stage 8.
+- [deewakar-com-labs-changes.md](deewakar-com-labs-changes.md) — the
+  exact block to paste on `deewakarmishra.github.io/labs` in Stage 8.
 
 ---
 
@@ -19,24 +19,20 @@ if any account (Polar, Cloudflare) still needs verification.
 Before starting Stage 1, all of the following must be true. If any
 item is a `[ ]`, resolve it first.
 
-- [ ] **Polar.sh organization "Acilox" verified.** If AMG has already
+- [ ] **Polar.sh organization "Deewakar Mishra" verified.** If AMG has already
       launched, this is done. Otherwise:
       → Sign up at [polar.sh](https://polar.sh) as an org named
-      **"Acilox"**. Submit ID verification. Wait 1-7 days.
+      **"Deewakar Mishra"**. Submit ID verification. Wait 1-7 days.
 - [ ] **Cloudflare account with Workers + Pages access.** Free tier
       is fine.
       → Sign up at [dash.cloudflare.com](https://dash.cloudflare.com).
-      Ensure `acilox.com`'s DNS is managed by Cloudflare (Websites →
+      Ensure `deewakarmishra.github.io`'s DNS is managed by Cloudflare (Websites →
       Add site).
-- [ ] **GitHub org `acilox` exists** and you have a Personal Access
-      Token with `repo` scope. Per
-      [github_pat_handling memory](../../../.claude/projects/-Users-dkumar191-Documents-Custom-Projects-portfolio/memory/github_pat_handling.md),
-      do NOT save this PAT anywhere on disk.
+- [ ] **GitHub org `deewakar` exists** and you have a Personal Access
+      Token with `repo` scope. Do NOT save this PAT anywhere on disk.
 - [ ] **Node.js 20+ + npm.** `node -v` → should print `v20.x` or
       higher.
-- [ ] **Git configured with the correct commit email.** Per
-      [commit_email memory](../../../.claude/projects/-Users-dkumar191-Documents-Custom-Projects-portfolio/memory/commit_email.md),
-      set locally for this repo:
+- [ ] **Git configured with the correct commit email.** Set locally for this repo:
       ```bash
       cd "labs/ledger"
       git config user.email "acidb062@gmail.com"
@@ -48,7 +44,7 @@ item is a `[ ]`, resolve it first.
       npx wrangler login
       ```
 - [ ] **You are in the portfolio project root.** All paths below are
-      relative to `/Users/dkumar191/Documents/Custom Projects/portfolio/`.
+      relative to `the repository root`.
 
 ---
 
@@ -125,7 +121,7 @@ downstream stage assumes green here.
 
 **Create the empty repo:**
 
-1. Go to [github.com/organizations/acilox/repositories/new](https://github.com/organizations/acilox/repositories/new).
+1. Go to [github.com/organizations/deewakar/repositories/new](https://github.com/organizations/deewakar/repositories/new).
 2. Repository name: **`ledger`**
 3. Description: **`A calm CBT thought record. Yours forever.`**
 4. Public.
@@ -166,13 +162,12 @@ git commit -m "v0.1.0 initial release"
   `build/`.
 - `v0.1.0` tag appears on the tags page.
 - On the repo home: click ⚙ (top-right) → set homepage
-  `https://ledger.acilox.com`, add topics: `cbt`, `mental-health`,
+  `https://ledger.deewakarmishra.github.io`, add topics: `cbt`, `mental-health`,
   `pwa`, `local-first`, `sveltekit`, `svelte`, `dexie`,
   `thought-record`.
 
-**If this is the first push to `acilox/*`,** confirm the commit
-author on the GitHub commit page shows **acidb062@gmail.com**, NOT
-`dkumar191`. If it shows `dkumar191`, you set the wrong email in
+**If this is the first push to `deewakar/*`,** confirm the commit
+author on the GitHub commit page shows **acidb062@gmail.com**. If it shows a different address, you set the wrong email in
 Stage 0 — fix and force-push (only safe because this is the initial
 commit and nobody else has pulled yet):
 
@@ -202,8 +197,8 @@ npx wrangler deploy
 
 You'll see something like:
 ```
-Deployed acilox-license-worker triggers:
-  https://acilox-license-worker.<your-subdomain>.workers.dev
+Deployed license-worker triggers:
+  https://license-worker.<your-subdomain>.workers.dev
 ```
 
 **Note this URL** — you'll paste it in Stage 5 (`LICENSE_SERVER_URL`)
@@ -213,7 +208,7 @@ and Stage 4 (Polar webhook).
 
 ```bash
 # Replace <WORKER_URL> with the URL above.
-export WORKER_URL="https://acilox-license-worker.<your-subdomain>.workers.dev"
+export WORKER_URL="https://license-worker.<your-subdomain>.workers.dev"
 
 # Should return: {"valid":false,"message":"License key not recognised..."}
 curl -s "$WORKER_URL/v1/validate" \
@@ -239,7 +234,7 @@ still fires for the new product.
 
 **Create the product:**
 
-1. Log in at [polar.sh/dashboard/acilox](https://polar.sh/dashboard/acilox).
+1. Log in at [polar.sh/dashboard/deewakar](https://polar.sh/dashboard/deewakar).
 2. Left sidebar → **Products** → **Create Product**.
 3. Fill:
    - **Name:** `Ledger Pro`
@@ -281,7 +276,7 @@ Just verify:
 
 1. Polar → Settings → Webhooks.
 2. Confirm one webhook exists pointing at
-   `https://acilox-license-worker.<your-subdomain>.workers.dev/webhooks/polar`.
+   `https://license-worker.<your-subdomain>.workers.dev/webhooks/polar`.
 3. Confirm the subscribed events include `license_key.created` and
    `license_key.updated`.
 4. If missing, click **Add endpoint**, paste the worker URL, subscribe
@@ -333,26 +328,26 @@ cd "labs/ledger"
 npm run build
 
 # Create + deploy in one command.
-npx wrangler pages deploy build --project-name ledger-acilox
+npx wrangler pages deploy build --project-name ledger
 ```
 
 The first run asks:
 - **Production branch name:** `main`
 - Confirms creation → deploys → prints a URL like
-  `https://ledger-acilox.pages.dev`.
+  `https://ledger-deewakarmishra.github.io`.
 
 **Note this URL** and open it in a browser. The welcome flow should
 render. Create an entry, close, reopen the tab → confirm persistence.
 
-**Wire the custom domain `ledger.acilox.com`:**
+**Wire the custom domain `ledger.deewakarmishra.github.io`:**
 
 1. Go to [dash.cloudflare.com](https://dash.cloudflare.com) → Workers
-   & Pages → your `ledger-acilox` project.
+   & Pages → your `ledger` project.
 2. Top tabs → **Custom domains** → **Set up a custom domain**.
-3. Enter `ledger.acilox.com` → **Continue** → **Activate domain**.
-4. Cloudflare auto-adds the CNAME to your `acilox.com` zone. SSL
+3. Enter `ledger.deewakarmishra.github.io` → **Continue** → **Activate domain**.
+4. Cloudflare auto-adds the CNAME to your `deewakarmishra.github.io` zone. SSL
    goes green within 30-90 seconds.
-5. Visit **https://ledger.acilox.com/** → welcome flow should render
+5. Visit **https://ledger.deewakarmishra.github.io/** → welcome flow should render
    with a valid cert.
 
 **Verify service worker in a real deploy:**
@@ -367,7 +362,7 @@ render. Create an entry, close, reopen the tab → confirm persistence.
 
 **Install the PWA from the real origin:**
 
-1. Chrome menu (⋮) on `ledger.acilox.com` → **Install Ledger…**
+1. Chrome menu (⋮) on `ledger.deewakarmishra.github.io` → **Install Ledger…**
 2. Confirm the icon on your dock/desktop uses the notes/journal
    mark, not a generic browser fallback (this validates that the
    PNG icons in the manifest resolve correctly).
@@ -379,7 +374,7 @@ render. Create an entry, close, reopen the tab → confirm persistence.
 
 1. Cloudflare Pages → project → Settings → Builds & deployments →
    Configure production deployments → **Connect to Git**.
-2. Choose GitHub → authorize → pick `acilox/ledger`.
+2. Choose GitHub → authorize → pick `deewakar/ledger`.
 3. Build settings:
    - **Framework preset:** SvelteKit
    - **Build command:** `cd labs/ledger && npm install && npm run build`
@@ -397,7 +392,7 @@ render. Create an entry, close, reopen the tab → confirm persistence.
 Prove the whole loop works: Polar → worker → deployed PWA → Pro tier
 unlocked → encrypted backup exports → key revoke → tier drops.
 
-1. **Open** https://ledger.acilox.com/.
+1. **Open** https://ledger.deewakarmishra.github.io/.
 2. **Complete the welcome flow** if not already done.
 3. **Settings → Ledger Pro → Paste the `lg_...` sandbox key** from
    Stage 4 → click **Activate**.
@@ -441,16 +436,16 @@ Only relevant if you changed `static/favicon.svg` at any point.
 cd "labs/ledger"
 npm run icons     # runs scripts/generate-icons.mjs (uses sharp)
 npm run build
-npx wrangler pages deploy build --project-name ledger-acilox
+npx wrangler pages deploy build --project-name ledger
 ```
 
 ---
 
-## Stage 8 — Update acilox.com/labs (~15 min)
+## Stage 8 — Update deewakarmishra.github.io/labs (~15 min)
 
 Add the Ledger product card to the marketing surface.
 
-1. Open [acilox-com-labs-changes.md](acilox-com-labs-changes.md) and
+1. Open [deewakar-com-labs-changes.md](deewakar-com-labs-changes.md) and
    read the whole file — it has the exact `<article class="product-card">`
    MDX block to insert.
 2. **Replace `<LEDGER_PRODUCT_ID>`** in the block with the checkout
@@ -458,21 +453,19 @@ Add the Ledger product card to the marketing surface.
    `https://buy.polar.sh/<slug>` — the block already includes the
    `https://buy.polar.sh/` prefix, so you're replacing just the
    `<LEDGER_PRODUCT_ID>` placeholder with the slug.)
-3. In the `acilox.com` codebase, find the `<section class="labs-products">`
+3. In the `deewakarmishra.github.io` codebase, find the `<section class="labs-products">`
    opened by the AMG card. **Do not touch AMG or FHIR Lens content.**
    Paste the Ledger card **after** the FHIR Lens card (if present) or
    after AMG (if FHIR Lens isn't up yet). Order per the locked plan
    is: annual-ladder products first (AMG → FHIR Lens), then
    one-time (Ledger).
 4. Add the small `.product-disclaimer` CSS from
-   [acilox-com-labs-changes.md](acilox-com-labs-changes.md) if not
+   [deewakar-com-labs-changes.md](deewakar-com-labs-changes.md) if not
    already present in the labs-products stylesheet.
-5. Commit + deploy `acilox.com` per its own deployment process (per
-   [portfolio_site memory](../../../.claude/projects/-Users-dkumar191-Documents-Custom-Projects-portfolio/memory/portfolio_site.md),
-   Astro 5 + Cloudflare Pages — same pattern).
+5. Commit + deploy `deewakarmishra.github.io` per its own deployment process (Astro 5 static site — same pattern).
 6. **Verify on the live site:**
    - Card renders with the "Live · v0.1.0" badge.
-   - "Open Ledger" button → https://ledger.acilox.com/ (correct
+   - "Open Ledger" button → https://ledger.deewakarmishra.github.io/ (correct
      redirect, no cert warning).
    - "Buy Pro Lifetime" button → the exact Polar checkout URL you
      captured. Open it, do NOT complete a real purchase — just
@@ -489,19 +482,19 @@ green.
 **Final go/no-go checklist:**
 
 - [ ] Stages 1-8 all completed with all verifications passing.
-- [ ] `https://ledger.acilox.com/` loads within 2s from a cold browser.
+- [ ] `https://ledger.deewakarmishra.github.io/` loads within 2s from a cold browser.
 - [ ] Buying with the sandbox card issues a `lg_...` key, PWA activates
       Pro within 1 second of pasting.
 - [ ] Revoking removes Pro (already verified in Stage 6).
-- [ ] The `acilox/ledger` GitHub repo is public and README renders.
-- [ ] `acilox.com/labs` shows the Ledger card.
+- [ ] The `deewakar/ledger` GitHub repo is public and README renders.
+- [ ] `deewakarmishra.github.io/labs` shows the Ledger card.
 
 **Post the launch (in this exact order, don't parallelize):**
 
 1. **Show HN post** (Tuesday-Thursday, 8-10am Pacific Time hits
    Front Page algorithm best).
    - Title: `Show HN: Ledger – a calm CBT thought record, local-first, one-time $79`
-   - URL: `https://ledger.acilox.com`
+   - URL: `https://ledger.deewakarmishra.github.io`
    - Body (paste verbatim, edit lightly to sound like you):
      ```
      I built Ledger because every CBT app I tried had at least one of
@@ -560,7 +553,7 @@ green.
   is probing / a client is misconfigured).
 - Hacker News comments — reply within 2 hours to every substantive
   comment. Don't argue. Concede real critiques with grace.
-- Your inbox — `labs@acilox.com` if configured, or wherever product
+- Your inbox — `labs@deewakarmishra.github.io` if configured, or wherever product
   issues land.
 
 **If something breaks in production:**
@@ -636,8 +629,8 @@ Almost always a SW cache. In the browser tab hosting the preview:
 ### Custom domain shows "Error 1016 origin DNS error" for hours
 
 Cloudflare's own DNS lookup for the CNAME failed. Check:
-1. Your `acilox.com` zone in Cloudflare DNS shows a `CNAME` record
-   for `ledger` pointing at `ledger-acilox.pages.dev`.
+1. Your `deewakarmishra.github.io` zone in Cloudflare DNS shows a `CNAME` record
+   for `ledger` pointing at `ledger-deewakarmishra.github.io`.
 2. The record's proxy status is 🟠 orange (proxied), not ⚪ grey (DNS
    only).
 3. Wait 5-10 minutes for edge propagation.
@@ -690,7 +683,7 @@ back rather than trying to hotfix live.
 2. Find the last known-good deploy (before v0.1.0).
 3. **⋮ menu → Rollback to this deployment.** Instant.
 4. Ledger has no previous production deploy in v0.1.0 — so "rollback"
-   means **remove the custom domain** so `ledger.acilox.com` returns
+   means **remove the custom domain** so `ledger.deewakarmishra.github.io` returns
    a Cloudflare error and users can't hit a broken build. Fix,
    redeploy, re-add the domain.
 
@@ -705,7 +698,7 @@ back rather than trying to hotfix live.
    keep their licenses; the checkout URL 404s and prevents new
    broken-experience sales.
 
-**acilox.com/labs card:**
+**deewakarmishra.github.io/labs card:**
 1. Revert the commit that added the Ledger card. Redeploy the site.
 
 ---
@@ -714,7 +707,7 @@ back rather than trying to hotfix live.
 
 - [AGENTS.md](AGENTS.md) — full code + architecture reference.
 - [roadmap.md](roadmap.md) — v0.1.x → v1.0.
-- [acilox-com-labs-changes.md](acilox-com-labs-changes.md) — the
+- [deewakar-com-labs-changes.md](deewakar-com-labs-changes.md) — the
   block for Stage 8.
 - [labs/_shared/license-worker/README.md](../../_shared/license-worker/README.md)
   — worker setup + design notes.

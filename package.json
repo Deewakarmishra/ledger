@@ -3,11 +3,11 @@
   "displayName": "Ledger",
   "description": "CBT thought-record web app. Capture an anxious thought in 30 seconds, walk it through 10 cognitive distortions, and arrive at a balanced reframe — then bring the week's pattern to your next therapy session. Local-first, no account, no AI advice.",
   "version": "0.1.0",
-  "publisher": "acilox",
+  "publisher": "deewakar",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://acilox.com/labs/ledger",
+  "homepage": "https://deewakarmishra.github.io/labs/ledger",
   "bugs": {
-    "url": "mailto:labs@acilox.com"
+    "url": "mailto:labs@deewakarmishra.github.io"
   },
   "repository": {
     "type": "git",

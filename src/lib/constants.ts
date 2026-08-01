@@ -1,7 +1,7 @@
 // Constants and shared formatters.
 
 export const APP_VERSION = '0.1.0';
-export const PURCHASE_URL = 'https://acilox.com/labs/ledger';
+export const PURCHASE_URL = 'https://deewakarmishra.github.io/labs/ledger';
 
 const DATE_FMT = new Intl.DateTimeFormat(undefined, {
   year: 'numeric',

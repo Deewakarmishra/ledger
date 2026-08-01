@@ -2,7 +2,7 @@
 
 > **A calm CBT thought record. Yours forever. Local-first, no account, no AI advice.**
 
-`acilox/ledger` is a tiny progressive web app for writing CBT thought
+`deewakar/ledger` is a tiny progressive web app for writing CBT thought
 records — the structured "what happened, what did I think, what's the
 evidence, what's a more balanced read" exercise that's the working tool
 of cognitive behavioural therapy. It has a 30-second panic-capture
@@ -16,8 +16,8 @@ print layout for showing your therapist.
 **Status:** v0.1.0 — ships the full thought-record flow, panic capture,
 weekly digest, first-run welcome with therapist guidance, encrypted
 Pro export, PWA service worker, and license validation against the
-[Acilox license worker](../_shared/license-worker/). Not yet listed on
-[acilox.com/labs](https://acilox.com/labs).
+[Deewakar Mishra license worker](../_shared/license-worker/). Not yet listed on
+[deewakarmishra.github.io/labs](https://deewakarmishra.github.io/labs).
 
 ## Why this exists
 
@@ -97,7 +97,7 @@ powers Alembic Migration Guard and FHIR Lens, distinguished by a
 The flow:
 
 1. User pastes their license key into **Settings → Pro**.
-2. App POSTs to `https://acilox-license-worker.<account>.workers.dev/v1/validate`
+2. App POSTs to `https://license-worker.<account>.workers.dev/v1/validate`
    with `{ license_key, product_id: "ledger", installation_id }`.
 3. Worker looks up the key in KV → returns
    `{ valid, tier, jwt, exp_ms, message }`.
@@ -203,7 +203,7 @@ The pricing reference point is one therapy session at $150-250. $79 is
 deliberately invisible against that anchor and explicitly avoids the
 monthly-fee fatigue mental-health subscriptions cause.
 
-Buy at [acilox.com/labs](https://acilox.com/labs).
+Buy at [deewakarmishra.github.io/labs](https://deewakarmishra.github.io/labs).
 
 ## Roadmap
 
@@ -237,5 +237,5 @@ Buy at [acilox.com/labs](https://acilox.com/labs).
 ## License
 
 Source available; commercial license. See `LICENSE`. Built by
-[Acilox](https://acilox.com) — production-grade systems for AI-native
+[Deewakar Mishra](https://deewakarmishra.github.io) — production-grade systems for AI-native
 products.

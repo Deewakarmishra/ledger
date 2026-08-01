@@ -8,7 +8,7 @@ and the project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.
 ## [0.1.0] — 2026-06-30
 
 Initial release. Pre-launch; the full feature set is frozen and the
-app is ready for the listing pass on [acilox.com/labs](https://acilox.com/labs).
+app is ready for the listing pass on [deewakarmishra.github.io/labs](https://deewakarmishra.github.io/labs).
 
 ### Added
 

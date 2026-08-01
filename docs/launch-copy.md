@@ -11,7 +11,7 @@ plain. Voice > polish on Show HN.
 
 ## Before you post — a 60-second sanity check
 
-- [ ] `https://ledger.acilox.com/` loads cold in <2s on mobile.
+- [ ] `https://ledger.deewakarmishra.github.io/` loads cold in <2s on mobile.
 - [ ] Real Polar checkout works end-to-end with a test card.
 - [ ] The buy button on the site points at the LIVE Polar URL, not
       the sandbox URL.
@@ -35,7 +35,7 @@ Show HN: Ledger – a calm CBT thought record, local-first, one-time $79
 
 **URL:**
 ```
-https://ledger.acilox.com
+https://ledger.deewakarmishra.github.io
 ```
 
 **Text (leave blank if pasting URL, or use the body below as a
@@ -119,7 +119,7 @@ digest for therapy prep. Encrypted backup.
 
 One-time $79. No subscription. Not a medical device.
 
-https://ledger.acilox.com
+https://ledger.deewakarmishra.github.io
 
 Show HN: [paste HN link]
 ```
@@ -185,7 +185,7 @@ clinician, would mean a lot — particularly on format faithfulness
 and the print layout, which I designed around bringing entries
 into sessions.
 
-→ ledger.acilox.com
+→ ledger.deewakarmishra.github.io
 → Source: github.com/Deewakarmishra/ledger
 ```
 
@@ -242,7 +242,7 @@ this community on **format faithfulness**. Specifically:
 Not a medical device — the welcome screen surfaces crisis hotlines
 and reminds users this is a self-help tool, not treatment.
 
-Free forever tier lives at ledger.acilox.com if you want to try
+Free forever tier lives at ledger.deewakarmishra.github.io if you want to try
 the format.
 
 Not looking to sell here — genuinely looking for "the format is
@@ -275,7 +275,7 @@ Not selling here — asking for feedback.
 
 I built a small PWA called Ledger to keep my own CBT thought
 records (Burns/Beck format). It's now a public tool at
-ledger.acilox.com. Before I promote it more broadly I want to make
+ledger.deewakarmishra.github.io. Before I promote it more broadly I want to make
 sure the format is faithful to how it's actually taught, and that
 the "not a medical device" framing lands correctly.
 
@@ -376,7 +376,7 @@ Biggest thing I got wrong: [one true concession]
 Biggest thing to fix in week 2: [one commit]
 
 Not a medical device.
-Free tier at ledger.acilox.com.
+Free tier at ledger.deewakarmishra.github.io.
 ```
 
 **Guidance for filling in:**

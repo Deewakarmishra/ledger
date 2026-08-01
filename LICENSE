@@ -1,11 +1,11 @@
 Ledger — Commercial License Agreement
 
-Copyright (c) 2026 Acilox. All rights reserved.
+Copyright (c) 2026 Deewakar Mishra. All rights reserved.
 
 This software is licensed, not sold. By installing or using the Ledger
 progressive web app ("Software") you agree to the following terms.
 
-1. Grant. Acilox grants the licensee a non-exclusive, non-transferable
+1. Grant. Deewakar Mishra grants the licensee a non-exclusive, non-transferable
    right to use the Software on the licensee's devices for the purpose
    of keeping personal cognitive-behavioural therapy thought records
    and panic-capture notes.
@@ -14,17 +14,17 @@ progressive web app ("Software") you agree to the following terms.
    and includes the full thought-record form, panic capture, weekly
    digest preview, and the most recent 30 entries. The Pro tier
    (uncapped history, expanded weekly digest, encrypted backups)
-   requires a paid license key obtained from https://acilox.com/labs.
+   requires a paid license key obtained from https://deewakarmishra.github.io/labs.
 
 3. Restrictions. The licensee may not:
    - resell, sublicense, or redistribute the Software outside the
-     official Acilox distribution channels;
+     official Deewakar Mishra distribution channels;
    - reverse engineer the license-validation logic with intent to
      bypass it;
    - share or resell Pro license keys.
 
 4. License validation. The Software may contact
-   acilox-license-worker.acilox.workers.dev (or a user-configured
+   license-worker.deewakar.workers.dev (or a user-configured
    self-hosted equivalent) to validate the licensee's license key
    and to receive cached entitlement tokens. No thought-record
    contents, no panic-capture contents, no file paths, and no
@@ -34,7 +34,7 @@ progressive web app ("Software") you agree to the following terms.
 
 5. Data ownership. All thought-record, panic-capture, and settings
    data created in the Software remains on the licensee's device.
-   Acilox neither receives nor stores any of it. Encrypted backups
+   Deewakar Mishra neither receives nor stores any of it. Encrypted backups
    produced by the Software are the licensee's responsibility to
    safeguard; loss of the passphrase makes a backup unrecoverable.
 
@@ -46,7 +46,7 @@ progressive web app ("Software") you agree to the following terms.
 7. No warranty. The Software is provided "AS IS" without warranty of
    any kind. The licensee uses the Software at their own risk.
 
-8. Termination. Acilox may terminate this license if the licensee
+8. Termination. Deewakar Mishra may terminate this license if the licensee
    materially breaches these terms.
 
-For questions, contact: labs@acilox.com.
+For questions, contact: labs@deewakarmishra.github.io.

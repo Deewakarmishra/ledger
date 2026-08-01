@@ -283,7 +283,7 @@
         <button class="btn-secondary" onclick={onSaveServer}>Save</button>
       </div>
       <p class="field-hint">
-        Leave the default unless you are running the Acilox license worker locally.
+        Leave the default unless you are running the Deewakar Mishra license worker locally.
       </p>
     </details>
   </section>
@@ -345,7 +345,7 @@
   </section>
 
   <section class="card space-y-2 text-xs text-slate-500 dark:text-slate-500">
-    <p>Ledger {APP_VERSION} · <a class="underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900 dark:decoration-slate-700" href="https://acilox.com/labs/ledger">acilox.com/labs/ledger</a></p>
+    <p>Ledger {APP_VERSION} · <a class="underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900 dark:decoration-slate-700" href="https://deewakarmishra.github.io/labs/ledger">deewakarmishra.github.io/labs/ledger</a></p>
     <p>Not a medical device. Not a substitute for professional care.</p>
     <button class="btn-ghost mt-2 px-0 text-xs" onclick={() => goto('/welcome')}>Re-open the welcome page</button>
   </section>

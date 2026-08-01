@@ -10,7 +10,7 @@ of everything that CAN progress in parallel, in priority order.
 - Polar not started → Stages 4, 6 blocked.
 - Cloudflare not configured → Stages 3, 5 blocked (but you control the
   pace here — do it whenever).
-- acilox.com/labs card ready to paste (Stage 8) but Polar checkout
+- deewakarmishra.github.io/labs card ready to paste (Stage 8) but Polar checkout
   URL is the missing input.
 - Launch (Stage 9) blocked on everything above.
 
@@ -24,7 +24,7 @@ This is the critical-path blocker. Every day you delay signing up
 delays launch by a day.
 
 - [ ] Go to [polar.sh](https://polar.sh) → **Sign up**.
-- [ ] Choose **Organization**, name it **`Acilox`** (case-sensitive
+- [ ] Choose **Organization**, name it **`Deewakar Mishra`** (case-sensitive
       later for URL slugs).
 - [ ] Submit ID verification — Polar accepts passport, driver's
       license, or national ID.
@@ -38,10 +38,10 @@ delays launch by a day.
 
 - [ ] Sign up at [dash.cloudflare.com](https://dash.cloudflare.com).
       Free tier is fine.
-- [ ] Websites → Add site → enter `acilox.com`.
+- [ ] Websites → Add site → enter `deewakarmishra.github.io`.
 - [ ] Cloudflare gives you two nameservers → point your registrar's
       nameservers at them. Propagation takes 5 min - 24h.
-- [ ] Once green, confirm your existing `acilox.com` A/CNAME records
+- [ ] Once green, confirm your existing `deewakarmishra.github.io` A/CNAME records
       auto-imported cleanly. If not, add them manually.
 - [ ] Confirm you can add a subdomain later without moving the main
       apex.
@@ -63,7 +63,7 @@ that lands on your machine or GitHub.
 
 ### Screenshots for the Polar product listing + Labs card
 
-Polar's product page + acilox.com/labs card both want a hero image.
+Polar's product page + deewakarmishra.github.io/labs card both want a hero image.
 
 - [ ] Open `npm run preview` from `labs/ledger/`.
 - [ ] Create ~5 varied thought-record entries so the digest looks
@@ -81,7 +81,7 @@ Polar's product page + acilox.com/labs card both want a hero image.
 
 ### OG social-share image (1200×630)
 
-For when the acilox.com/labs card and future Show HN post get shared
+For when the deewakarmishra.github.io/labs card and future Show HN post get shared
 on Twitter/LinkedIn/HN.
 
 - [ ] Design in Figma or use [og-playground.vercel.app](https://og-playground.vercel.app):
@@ -95,7 +95,7 @@ on Twitter/LinkedIn/HN.
 - [ ] Save as `labs/ledger/static/og-image.png` (1200×630).
 - [ ] Add to `src/app.html`:
       ```html
-      <meta property="og:image" content="https://ledger.acilox.com/og-image.png" />
+      <meta property="og:image" content="https://ledger.deewakarmishra.github.io/og-image.png" />
       <meta property="og:title" content="Ledger — a calm CBT thought record" />
       <meta property="og:description" content="Local-first CBT thought-record PWA. Not a medical device. One-time $79." />
       <meta name="twitter:card" content="summary_large_image" />
@@ -108,7 +108,7 @@ differently — verify before Show HN.
 
 - [ ] Deploy `build/` to any temporary static host you have access to
       (`npx serve build` + ngrok, Netlify drop, GitHub Pages of the
-      repo, etc.). This is NOT `ledger.acilox.com` yet — just a
+      repo, etc.). This is NOT `ledger.deewakarmishra.github.io` yet — just a
       throwaway URL for smoke testing.
 - [ ] Personal iPhone: open in Safari, tap Share → Add to Home
       Screen. Confirm the icon uses the notes mark (validates apple-
@@ -165,7 +165,7 @@ private feedback first.
 - [ ] Add a GitHub Actions workflow at `.github/workflows/ci.yml`
       that runs `npm run lint && npm test` on push. Free, prevents
       regressions post-launch.
-- [ ] Add a repo badge or short "Live at ledger.acilox.com" line to
+- [ ] Add a repo badge or short "Live at ledger.deewakarmishra.github.io" line to
       the README once the domain resolves (Stage 5).
 - [ ] Add a CODEOWNERS file pointing to your handle so PR reviews
       get requested correctly (currently a solo repo, but good
